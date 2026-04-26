@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Carrom Multiplayer | VISSA PRO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="players-header">
+            <div class="player" id="player1Card">
+                <div class="avatar">👑</div>
+                <div class="name">Player 1</div>
+                <div class="score" id="score1">0</div>
+            </div>
+            <div class="vs">⚡ VS 👑</div>
+            <div class="player" id="player2Card">
+                <div class="avatar">⚡</div>
+                <div class="name">Player 2</div>
+                <div class="score" id="score2">0</div>
+            </div>
+        </div>
+
+        <canvas id="carromCanvas" width="800" height="800"></canvas>
+
+        <div class="controls">
+            <button id="resetBtn">🔄 Reset Game</button>
+            <div class="turn-indicator" id="turnStatus">🎯 Your Turn</div>
+            <button id="copyLinkBtn">🔗 Invite Friend</button>
+        </div>
+        <div id="roomInfo" class="room-info"></div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
